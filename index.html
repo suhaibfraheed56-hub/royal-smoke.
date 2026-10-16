@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Smoke | رويال سموك</title>
+<style>
+:root{--gold:#e4b957;--gold2:#f6d887;--bg:#080909;--panel:#111212;--muted:#bdb8ad}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:#f8f4e9;font-family:Tahoma,Arial,sans-serif}
+a{color:inherit;text-decoration:none} .wrap{max-width:1200px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:#080909ed;border-bottom:1px solid #554322}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 0;flex-wrap:wrap}
+.logo{font-family:Georgia,serif;color:var(--gold);font-size:clamp(22px,4vw,34px);letter-spacing:1px;direction:ltr;text-align:center}
+.logo small{display:block;font:9px Tahoma,sans-serif;letter-spacing:3px;color:#d9d0bd}
+nav a{font-size:14px;color:#eee5d1} nav a:hover{color:var(--gold)}
+.hero{min-height:390px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;padding:48px 0;background:radial-gradient(ellipse at 75% 40%,#4a2b12 0,#17120d 35%,#080909 75%)}
+.hero h1{font-family:Georgia,serif;color:var(--gold);font-size:clamp(38px,6vw,68px);margin:0 0 12px;direction:ltr}
+.hero h2{font-size:clamp(22px,3vw,32px);margin:0 0 14px}.hero p{color:#d3cbbc;line-height:1.9}
+.visual{min-height:260px;border:1px solid #8c692d;border-radius:14px;background:linear-gradient(135deg,#17110a,#3b2614,#090909);display:grid;place-items:center;font-size:100px;position:relative;overflow:hidden}
+.visual:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent,#0008)}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;background:var(--gold);color:#15110a;padding:12px 22px;font-weight:bold;cursor:pointer}
+.btn.outline{background:transparent;color:var(--gold)}
+section{padding:34px 0;border-top:1px solid #332a1a}.title{text-align:center;color:var(--gold2);font-size:26px;margin:0 0 25px}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.cat{background:var(--panel);border:1px solid #4b3b20;border-radius:10px;text-align:center;padding:18px 8px;color:#eee0c1}.cat span{display:block;font-size:30px;margin-bottom:8px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:linear-gradient(#151515,#0c0c0c);border:1px solid #554322;border-radius:12px;padding:18px;text-align:center}.product .pic{height:95px;display:grid;place-items:center;font-size:54px;background:#090909;border-radius:8px;margin-bottom:12px}.product h3{font-size:17px;margin:8px 0}.product p{color:var(--muted);font-size:13px}.price{color:var(--gold2);font-weight:bold;margin:12px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;color:#e8d8b7}.features div{padding:15px;background:#101111;border-radius:8px}.features b{display:block;color:var(--gold);font-size:23px;margin-bottom:7px}
+footer{padding:28px 0;text-align:center;color:#aaa18f;border-top:1px solid #3d301c;font-size:13px}
+#cartStatus{color:var(--gold);font-size:13px}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding:30px 0}.visual{min-height:170px;font-size:75px}.categories{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}nav{justify-content:center}.hero-copy{text-align:center}}
+@media(max-width:420px){.products{grid-template-columns:1fr}.wrap{padding:0 14px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a href="#home">الرئيسية</a><a href="#products">المنتجات</a>
+<div class="logo">♛ ROYAL SMOKE<small>PREMIUM TOBACCO & MORE</small></div>
+<a href="#about">من نحن</a><a href="#contact">تواصل معنا</a>
+</nav></div></header>
+<main id="home" class="wrap">
+<div class="hero">
+<div class="hero-copy"><h1>ROYAL SMOKE</h1><h2>نكهة استثنائية.. لكل لحظة</h2><p>كل ما تحتاجه من مستلزمات المعسل والإكسسوارات، في مكان واحد.</p><a class="btn" href="#products">تسوّق الآن　↙</a></div>
+<div class="visual" aria-label="زخرفة ذهبية">♨　♛　☕</div>
+</div>
+<section><h2 class="title">تصفّح الأقسام</h2><div class="categories">
+<div class="cat"><span>🍃</span>أنواع المعسل</div><div class="cat"><span>♨</span>أراجيل</div><div class="cat"><span>🧱</span>فحم</div><div class="cat"><span>🛠</span>إكسسوارات</div><div class="cat"><span>📦</span>سجائر</div><div class="cat"><span>🥤</span>مستلزمات أخرى</div>
+</div></section>
+<section id="products"><h2 class="title">أكثر المنتجات مبيعاً</h2><div class="products" id="productGrid"></div></section>
+<section id="about"><h2 class="title">تجربة Royal Smoke</h2><div class="features"><div><b>🚚</b>توصيل سريع<small><br>حسب المناطق المتاحة</small></div><div><b>✦</b>منتجات مختارة<small><br>جودة نهتم بها</small></div><div><b>🔒</b>تواصل آمن<small><br>للاستفسار عن الطلب</small></div><div><b>☎</b>خدمة العملاء<small><br>نسعد بخدمتكم</small></div></div></section>
+<section id="contact" style="text-align:center"><h2 class="title">تواصل معنا</h2><p>للطلب أو الاستفسار، أضيفي رقم الهاتف وروابط التواصل الخاصة بالمحل هنا.</p><a class="btn outline" href="mailto:hello@example.com">راسلنا</a></section>
+</main>
+<footer><div class="wrap"><div class="logo">♛ ROYAL SMOKE</div><p>© 2026 Royal Smoke — جميع الحقوق محفوظة</p><p id="cartStatus">السلة: 0 منتجات</p></div></footer>
+<script>
+// عدّلي أسماء المنتجات والأسعار من هذه القائمة بسهولة.
+const products = [
+ {name:"معسل مزايا عنب", detail:"50 جرام", price:2.50, icon:"🍇"},
+ {name:"معسل تفاحتين", detail:"50 جرام", price:2.00, icon:"🍎"},
+ {name:"فحم طبيعي", detail:"1 كغم", price:3.50, icon:"🧱"},
+ {name:"أرجيلة أنيقة", detail:"معدن عالي الجودة", price:45.00, icon:"♨"},
+ {name:"سجائر", detail:"علبة", price:4.00, icon:"📦"},
+ {name:"ملقط فحم", detail:"ستانلس", price:2.00, icon:"🛠"}
+];
+let cart=0;
+document.getElementById("productGrid").innerHTML=products.map((p,i)=>`
+ <article class="product"><div class="pic">${p.icon}</div><h3>${p.name}</h3><p>${p.detail}</p>
+ <div class="price">${p.price.toFixed(2)} JD</div><button class="btn" onclick="addToCart()">أضف إلى السلة 🛒</button></article>`).join("");
+function addToCart(){cart++;document.getElementById("cartStatus").textContent=`السلة: ${cart} منتجات`;}
+</script>
+</body>
+</html>
